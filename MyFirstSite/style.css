@@ -1,0 +1,27 @@
+body {
+    background-image: url("Data/BG.png");
+    text-shadow: 5px 3px 3px #000000;
+}
+
+polygon.arrow {
+    stroke: black;
+    stroke-width: 3px;
+    fill: #FFFFFF;
+}
+
+article.loading {
+    text-align: center;
+}
+
+p.loading {
+    display: none;
+    text-align: inherit;
+    color: white;
+    font-size: xx-large;
+}
+
+progress.loading {
+    display: none;
+    width: 50%;
+    height: 40px;
+}
