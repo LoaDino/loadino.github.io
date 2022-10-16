@@ -1,4 +1,6 @@
-var progressbar = null
+var progressbar = null;
+var projects = Array();
+var index = 0;
 
 /*
 
@@ -18,6 +20,14 @@ BannerBot Discord - баннер для дискорд сервера, авто�
 позже: RandMaster Telegram - бот-игра с пвп, рейдами на боссов, домами, которые можно изменять, вещами и предметами, а также с собиранием ресурсов в казике, шахтах и т.п.
 */
 
+window.onload = function () {
+    let height = window.screen.height;
+
+    let empty = document.getElementById("empty-space");
+
+    empty.style = "width: 100%;height: " + height + "px";
+}
+
 window.onscroll = function () {
     if (progressbar == null) {
         progressbar = document.getElementsByClassName("loading");
@@ -29,6 +39,12 @@ window.onscroll = function () {
     progressbar[2].value = scrollY
 
     if (progressbar[2].value >= progressbar[2].max) {
+        var projectspace = document.getElementsByClassName("loading");
 
+        let child = document.createElement("p");
+
+        child.appendChild(document.createTextNode("okay i pull up"));
+
+        projectspace[0].appendChild(child);
     }
 }
