@@ -23,7 +23,7 @@ window.onload = () => {
         } else {
             if (Number(money) >= Number(sum.value)) {
                 alert("успешно!");
-                tg.sendData(currency.value);
+                tg.sendData(sum.value);
             } else {
                 alert("невозможно, у вас не хватает монет.");
             }
