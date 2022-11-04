@@ -12,7 +12,7 @@ window.onload = () => {
     if (money != null) {
         Pmoney.innerHTML = "У вас " + money + " монет";
     } else {
-        Pmoney.innerHTML = "Ошибка получаения данных. Перезапустите это окно."
+        Pmoney.innerHTML = "Ошибка получения данных. Перезапустите это окно."
     }
 
     document.querySelector("#submit").onclick = () => {
