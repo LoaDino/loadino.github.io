@@ -1,0 +1,27 @@
+body {
+    background-color: #202020;
+    text-align: center;
+    color: #ffbb00;
+    font-size: 300%;
+}
+
+select {
+    background-color: #404040;
+    color: #ffbb00;
+    border-radius: 20px;
+    font-size: 70%;
+}
+
+input {
+    background-color: #404040;
+    color: #ffbb00;
+    border-radius: 20px;
+    font-size: 70%;
+}
+
+.oplata {
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 70%;
+}
