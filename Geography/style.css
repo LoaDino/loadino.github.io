@@ -1,0 +1,97 @@
+body {
+    text-shadow: 5px 3px 3px #000000;
+}
+
+header {
+    border-radius: 10px;
+    width: 100%;
+    position: sticky;
+    top: 1%;
+    background-color: #353535;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#Menu {
+    background-color: #353535;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    right: 1%;
+    left: 100%;
+    position: fixed;
+}
+
+#BtnMenu {
+    position: absolute;
+    right: 1%;
+    top: 10%;
+    width: 10%;
+    height: 80%;
+}
+
+.MenuAnimation {
+    animation: openmenu 0.3s forwards;
+}
+
+@keyframes openmenu {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 69%;
+    }
+}
+
+.MenuAnimationBack {
+    animation: closemenu 0.3s forwards;
+}
+
+@keyframes closemenu {
+    0% {
+        left: 69%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+
+.info {
+    color: #FFFFFF;
+    box-sizing: content-box;
+    width: 69%;
+}
+
+p {
+    color: #FFFFFF;
+    font-size: larger;
+}
+
+.head {
+    font-size: x-large;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.Me {
+    display: inline;
+}
+
+.Other {
+    color: #FFFFFF;
+}
+
+a:link {
+    color: rgb(95, 63, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+a:visited {
+    color: rgb(255, 93, 93);
+    text-decoration: none;
+}
