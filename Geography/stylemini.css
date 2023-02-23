@@ -2,6 +2,14 @@ body {
     text-shadow: 5px 3px 3px #000000;
 }
 
+h1 {
+    font-size: large;
+}
+
+h3 {
+    font-size: small;
+}
+
 header {
     border-radius: 10px;
     width: 100%;
@@ -71,11 +79,11 @@ header {
 
 p {
     color: #FFFFFF;
-    font-size: larger;
+    font-size: smaller;
 }
 
 .head {
-    font-size: x-large;
+    font-size: medium;
     text-align: center;
     font-weight: bolder;
 }

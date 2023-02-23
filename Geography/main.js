@@ -1,6 +1,16 @@
 MenuOpen = false;
 
 window.onload = function () {
+    if (window.screen.height > window.screen.width) {
+        document.getElementsByTagName("head")[0].insertAdjacentHTML(
+            "beforeend",
+            "<link rel=\"stylesheet\" href=\"stylemini.css\" />");
+    } else {
+        document.getElementsByTagName("head")[0].insertAdjacentHTML(
+            "beforeend",
+            "<link rel=\"stylesheet\" href=\"style.css\" />");
+    }
+
     let btn = document.getElementById("BtnMenu");
 
     btn.onclick = function () {
@@ -44,34 +54,62 @@ window.onload = function () {
     let swot = document.getElementById("swot")
     let expected = document.getElementById("expected")
 
-    scheme.onclick = function () {
-        window.scrollTo(0, 25);
+    function getOffset(el) {
+        const bodyRect = document.body.getBoundingClientRect();
+        const rect = el.getBoundingClientRect();
+
+        const header = document.getElementsByTagName("header")[0]
+
+        const headerRect = header.getBoundingClientRect();
+
+        return bodyRect.top + rect.top - headerRect.height - window.screen.height * 0.03;
     }
+
+    scheme.onclick = function () {
+        const element = document.getElementById("scheme_info")
+        window.scrollTo(0, 0)
+        window.scrollTo(0, getOffset(element));
+    }
+
     backgrounds.onclick = function () {
-        window.scrollTo(0, 822);
+        const element = document.getElementById("backgrounds_info")
+        window.scrollTo(0, 0)
+        window.scrollTo(0, getOffset(element));
     }
 
     geography.onclick = function () {
-        window.scrollTo(0, 1461);
+        const element = document.getElementById("geography_info")
+        window.scrollTo(0, 0)
+        window.scrollTo(0, getOffset(element));
     }
 
     economy.onclick = function () {
-        window.scrollTo(0, 2061);
+        const element = document.getElementById("economy_info")
+        window.scrollTo(0, 0)
+        window.scrollTo(0, getOffset(element));
     }
 
     features.onclick = function () {
-        window.scrollTo(0, 2598);
+        const element = document.getElementById("features_info")
+        window.scrollTo(0, 0)
+        window.scrollTo(0, getOffset(element));
     }
 
     base.onclick = function () {
-        window.scrollTo(0, 3208);
+        const element = document.getElementById("base_info")
+        window.scrollTo(0, 0)
+        window.scrollTo(0, getOffset(element));
     }
 
     swot.onclick = function () {
-        window.scrollTo(0, 3922);
+        const element = document.getElementById("swot_info")
+        window.scrollTo(0, 0)
+        window.scrollTo(0, getOffset(element));
     }
 
     expected.onclick = function () {
-        window.scrollTo(0, 4375);
+        const element = document.getElementById("expected_info")
+        window.scrollTo(0, 0)
+        window.scrollTo(0, getOffset(element));
     }
 }
