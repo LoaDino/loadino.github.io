@@ -18,10 +18,10 @@
             <svg width="100%" height="100%">
                 <line id="Line1" x1="5%" y1="50%" x2="95%" y2="50%" stroke="white" stroke-linecap="round"
                     stroke-width="7">
-                    <animate id="lineCenter" xlink:href="#Line1" attributeName="stroke" from="white" to="#353535"
-                        dur="0.3s" fill="freeze" begin="BtnMenu.click" />
-                    <animate id="lineCenterBack" xlink:href="#Line1" attributeName="stroke" from="#353535" to="white"
-                        dur="0.3s" fill="freeze" begin="BtnMenu.click" />
+                    <animate id="lineCenter" xlink:href="#Line1" attributeName="opacity" from="1" to="0" dur="0.3s"
+                        fill="freeze" begin="BtnMenu.click" />
+                    <animate id="lineCenterBack" xlink:href="#Line1" attributeName="opacity" from="0" to="1" dur="0.3s"
+                        fill="freeze" begin="BtnMenu.click" />
                 </line>
 
                 <line id="Line2" x1="5%" y1="20%" x2="95%" y2="20%" stroke="white" stroke-linecap="round"
