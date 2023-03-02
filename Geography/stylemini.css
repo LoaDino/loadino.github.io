@@ -28,7 +28,7 @@ header {
     background-color: #353535;
     border-radius: 10px;
     text-align: center;
-    width: 30%;
+    width: 50%;
     right: 1%;
     left: 100%;
     position: fixed;
@@ -52,7 +52,7 @@ header {
     }
 
     100% {
-        left: 69%;
+        left: 50%;
     }
 }
 
@@ -62,7 +62,7 @@ header {
 
 @keyframes closemenu {
     0% {
-        left: 69%;
+        left: 50%;
     }
 
     100% {
@@ -70,11 +70,98 @@ header {
     }
 }
 
+.LineAnimation1 {
+    animation: moveline1 0.3s forwards;
+}
+
+@keyframes moveline1 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.LineAnimationBack1 {
+    animation: movelineback1 0.3s forwards;
+}
+
+@keyframes movelineback1 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.LineAnimation2 {
+    transform-origin: center;
+    animation: moveline2 0.3s forwards;
+}
+
+@keyframes moveline2 {
+    0% {
+        transform: rotate(0deg) translate(0%, 0%);
+    }
+
+    100% {
+        transform: rotate(45deg) translate(0%, 30%);
+    }
+}
+
+.LineAnimationBack2 {
+    transform-origin: center;
+    animation: movelineback2 0.3s forwards;
+}
+
+@keyframes movelineback2 {
+    0% {
+        transform: rotate(45deg) translate(0%, 30%);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(0%, 0%);
+    }
+}
+
+.LineAnimation3 {
+    transform-origin: center;
+    animation: moveline3 0.3s forwards;
+}
+
+@keyframes moveline3 {
+    0% {
+        transform: rotate(0deg) translate(0%, 0%);
+    }
+
+    100% {
+        transform: rotate(-45deg) translate(0%, -30%);
+    }
+}
+
+.LineAnimationBack3 {
+    transform-origin: center;
+    animation: movelineback3 0.3s forwards;
+}
+
+@keyframes movelineback3 {
+    0% {
+        transform: rotate(-45deg) translate(0%, -30%);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(0%, 0%);
+    }
+}
 
 .info {
     color: #FFFFFF;
     box-sizing: content-box;
-    width: 69%;
+    width: 100%;
 }
 
 p {

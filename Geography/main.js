@@ -9,35 +9,44 @@ window.onload = function () {
         document.getElementsByTagName("head")[0].insertAdjacentHTML(
             "beforeend",
             "<link rel=\"stylesheet\" href=\"style.css\" />");
+
     }
 
     let btn = document.getElementById("BtnMenu");
 
     btn.onclick = function () {
         if (!MenuOpen) {
-            let line1 = document.getElementById("lineCenter");
-            let line2 = document.getElementById("lineDown");
-            let line3 = document.getElementById("lineUp");
+            let line1 = document.getElementById("Line1");
+            let line2 = document.getElementById("Line2");
+            let line3 = document.getElementById("Line3");
 
             let menu = document.getElementById("Menu");
 
-            line1.beginElement();
-            line2.beginElement();
-            line3.beginElement();
+            line1.classList.add("LineAnimation1");
+            line1.classList.remove("LineAnimationBack1");
+            line2.classList.add("LineAnimation2");
+            line2.classList.remove("LineAnimationBack2");
+            line3.classList.add("LineAnimation3");
+            line3.classList.remove("LineAnimationBack3");
+
             menu.classList.add("MenuAnimation");
             menu.classList.remove("MenuAnimationBack");
 
             MenuOpen = true;
         } else {
-            let line1 = document.getElementById("lineCenterBack");
-            let line2 = document.getElementById("lineDownBack");
-            let line3 = document.getElementById("lineUpBack");
+            let line1 = document.getElementById("Line1");
+            let line2 = document.getElementById("Line2");
+            let line3 = document.getElementById("Line3");
 
             let menu = document.getElementById("Menu");
 
-            line1.beginElement();
-            line2.beginElement()
-            line3.beginElement();
+            line1.classList.remove("LineAnimation1");
+            line1.classList.add("LinAnimationBack1");
+            line2.classList.remove("LineAnimation2");
+            line2.classList.add("LineAnimationBack2");
+            line3.classList.remove("LineAnimation3");
+            line3.classList.add("LineAnimationBack3");
+
             menu.classList.add("MenuAnimationBack");
             menu.classList.remove("MenuAnimation");
 
