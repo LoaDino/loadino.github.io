@@ -44,6 +44,8 @@ body {
 canvas {
     position: absolute;
     animation: HideCanvas 3s ease-out;
+    color: white;
+    font-family: "Marker Felt", fantasy;
     opacity: 0;
 }
 h1 {
@@ -54,23 +56,13 @@ h2 {
     animation: fadeInRight 4s ease-out;
 }
 article {
-    clear: both;
     font-family: "Marker Felt", fantasy;
     color: white;
     animation: fadeInRight 4s ease-out;
 }
 
-section {
-    float: left;
-    width: 70%;
-}
-
-aside {
-    float: right;
-    width: 30%;
-}
-
 img {
+  position: relative;
   width: 100%;
 }
 
@@ -83,8 +75,7 @@ img {
 }
 
 nav {
-  clear: both;
-  font-family: "Marker Felt", fantasy;
+    font-family: "Marker Felt", fantasy;
     color: #AA0000;
     animation: fadeInRight 4s ease-out;
 }
