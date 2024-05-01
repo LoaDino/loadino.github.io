@@ -98,9 +98,9 @@ function start() {
 	style.rel = 'stylesheet'
 
 	if (window.innerHeight > window.innerWidth) {
-		style.href = 'style2.css'
+		style.href = './style2.css'
 	} else {
-		style.href = 'style.css'
+		style.href = './style.css'
 	}
 
 	head[0].appendChild(style)
