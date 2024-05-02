@@ -180,6 +180,26 @@ function ON_SCROLL() {
 			head.classList.remove('active_alt')
 		}
 	}
+
+	heads = document.getElementsByTagName('h3')
+
+	for (let head of heads) {
+		if (visible(head)) {
+			head.classList.add('active_alt')
+		} else {
+			head.classList.remove('active_alt')
+		}
+	}
+
+	let uls = document.getElementsByTagName('ul')
+
+	for (let ul of uls) {
+		if (visible(ul)) {
+			ul.classList.add('active_alt')
+		} else {
+			ul.classList.remove('active_alt')
+		}
+	}
 }
 
 window.onscroll = ON_SCROLL

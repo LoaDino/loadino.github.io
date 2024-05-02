@@ -55,6 +55,12 @@ h1 {
 h2 {
     animation: fadeInRight 4s ease-out;
 }
+h3 {
+    animation: fadeInRight 4s ease-out;
+}
+li {
+    animation: fadeInRight 4s ease-out;
+}
 article {
     font-family: "Marker Felt", fantasy;
     color: white;
@@ -74,7 +80,7 @@ img {
   animation: fromLeft 1s ease-out;
 }
 
-nav {
+footer {
     font-family: "Marker Felt", fantasy;
     color: #AA0000;
     animation: fadeInRight 4s ease-out;
