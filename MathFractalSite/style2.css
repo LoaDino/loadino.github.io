@@ -54,9 +54,11 @@ h1 {
 }
 h2 {
     animation: fadeInRight 4s ease-out;
+    color: #AA0000;
 }
 h3 {
     animation: fadeInRight 4s ease-out;
+    color: #0000AA;
 }
 li {
     animation: fadeInRight 4s ease-out;
@@ -81,8 +83,9 @@ img {
 }
 
 footer {
-    font-family: "Marker Felt", fantasy;
-    color: #AA0000;
+  clear: both;
+  font-family: "Marker Felt", fantasy;
+    color: #00AA00;
     animation: fadeInRight 4s ease-out;
 }
 
