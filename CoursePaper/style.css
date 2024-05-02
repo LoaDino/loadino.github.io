@@ -1,0 +1,50 @@
+body {
+    padding-top: 5%;
+    background: linear-gradient(#E366B5, #C7007D);
+    color: #6C227E;
+    font-family: 'Bradley Hand', cursive;
+    text-align: center;
+}
+
+article {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+input {
+    background-color: #F26D93;
+    border-color: #F26D93;
+    color: #6C227E;
+    border-radius: 10px;
+    height: 32px;
+    font-family: 'Bradley Hand', cursive;
+    font-size: medium;
+}
+
+#input_text {
+    width: 50%;
+}
+
+#random {
+    transform: translateY(33%);
+}
+
+aside {
+    position: absolute;
+    width: 30%;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+}
+
+#bg_image {
+    width: 100%;
+}
+
+#copyright {
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    left: 0;
+}
