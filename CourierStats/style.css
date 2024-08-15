@@ -1,0 +1,73 @@
+body {
+    background: linear-gradient(#159957, 75%, #155799);
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    margin: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#container {
+    height: 100vh;
+    width: 100vh;
+    margin: 0;
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center;
+}
+
+.stats {
+    display: none;
+    text-align: center;
+    margin-left: auto;
+    line-height: 70%;
+    margin-right: auto;
+    width: 90%;
+    height: 84%;
+}
+
+.stat {
+    width: 90%;
+}
+
+.another_stats {
+    display: flex;
+
+}
+
+p.main {
+    font-size: 100px;
+}
+
+p.add {
+    font-size: 50px;
+}
+
+#buttons {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid #fff;
+    border-radius: 30px;
+    width: 90%; /* Ширина блока 90% */
+    height: 10%; /* Высота блока 30% */
+    box-sizing: border-box; /* Чтобы учитывать отступы и границы в ширину и высоту */
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%; /* Отступ снизу */
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center;    /* Центрирование по вертикали */
+    gap: 1%
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.5s;
+    border: 0px;
+    border-radius: 30px;
+    width: 33%;
+    height: 100%;
+}
+
+#today_btn {
+    background-color: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>CourierStats</title>
+</head>
+<body>
+    <div id="container">
+        <div class="stats" id="today">
+            <h1>Статистика за сегодня</h1>
+            <p class="main" id="oph">0</p>
+            <h2>заказов в час</h2>
+            <div class="another_stats">
+                <div class="stat">
+                    <p class="add" id="hour_amount">0</p>
+                    <h4>заказов за час</h4>
+                </div>
+                <div class="stat">
+                    <p class="add" id="day_amount">0</p>
+                    <h4>заказов за день</h4>
+                </div>
+                <div class="stat">
+                    <p class="add" id="hpd">0</p>
+                    <h4>часов за день</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats" id="best">
+            <h1>Лучшая статистика</h1>
+            <p class="main" id="best_oph_value">0</p>
+            <h2>заказов в час</h2>
+            <h2 id="best_oph">дата: </h2>
+            <div class="another_stats">
+                <div class="stat">
+                    <p class="add" id="best_day_value">0</p>
+                    <h4>заказов за день</h4>
+                    <h4 id="best_day">дата:</h4>
+                </div>
+                <div class="stat">
+                    <p class="add" id="best_hpd_value">0</p>
+                    <h4>часов за день</h4>
+                    <h4 id="best_hpd">дата:</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats" id="all">
+            <h1>Вся статистика</h1>
+            <div class="another_stats">
+                <div class="stat">
+                    <p class="add" id="month_amount">0</p>
+                    <h4>заказов за день</h4>
+                </div>
+                <div class="stat">
+                    <p class="add" id="all_amount">0</p>
+                    <h4>часов за день</h4>
+                </div>
+            </div>
+        </div>
+
+        <div id="buttons">
+            <button id="best_btn"></button>
+            <button id="today_btn"></button>
+            <button id="all_btn"></button>
+        </div>
+    </div>
+</body>
+</html>
