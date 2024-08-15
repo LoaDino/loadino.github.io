@@ -30,7 +30,7 @@ function formatDate(input) {
     const monthIndex = parseInt(month, 10) - 1;
 
     // Формируем строку с нужным форматом
-    const formattedDate = `дата: ${day} ${months[monthIndex]} ${year}`;
+    const formattedDate = `${day} ${months[monthIndex]} ${year}`;
 
     return formattedDate;
 }
