@@ -30,7 +30,7 @@ function formatDate(input) {
     const monthIndex = parseInt(month, 10) - 1;
 
     // Формируем строку с нужным форматом
-    const formattedDate = `${day} ${months[monthIndex]} ${year}`;
+    const formattedDate = `дата: ${day} ${months[monthIndex]} ${year}`;
 
     return formattedDate;
 }
@@ -55,13 +55,13 @@ window.onload = () => {
     all_amount_el.innerHTML = all_amount;
     order_per_hour_el.innerHTML = order_per_hour;
     hour_per_day_el.innerHTML = hour_per_day;
-    if (best_day != null) {
+    if (best_day != "None") {
         best_day_el.innerHTML = formatDate(best_day);
     }
-    if (best_oph != null) {
+    if (best_oph != "None") {
         best_oph_el.innerHTML = formatDate(best_oph);
     }
-    if (best_hpd != null) {
+    if (best_hpd != "None") {
         best_hpd_el.innerHTML = formatDate(best_hpd);
     }
     best_day_value_el.innerHTML = best_day_value;
