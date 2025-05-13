@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CareerMap IT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.14.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>CareerMap IT — Определи свою карьерную траекторию</h1>
+
+        <form id="profileForm">
+            <label>Навыки (0–10): <input type="number" id="skills" min="0" max="10" required></label>
+            <label>Опыт в годах: <input type="number" id="experience" min="0" max="30" required></label>
+            <label>Образование (0–нет, 1–бак, 2–маг, 3–PhD): <input type="number" id="education" min="0" max="3" required></label>
+            <label>Английский (0–none, 1–intermediate, 2–advanced): <input type="number" id="english" min="0" max="2" required></label>
+            <label>Проекты в портфолио: <input type="number" id="projects" min="0" max="50" required></label>
+            <label>Сертификаты (0–нет, 1–1-2 шт, 2–много): <input type="number" id="certs" min="0" max="2" required></label>
+            <button type="submit">Определить кластер</button>
+        </form>
+
+        <div id="result" class="card hidden">
+            <h2>Ваш кластер: <span id="clusterId"></span></h2>
+            <p id="clusterDesc"></p>
+        </div>
+
+        <canvas id="clusterChart" width="600" height="400"></canvas>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
