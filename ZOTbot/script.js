@@ -85,8 +85,8 @@ function createProduct(product) {
 
     info.append(
         id,
-        createField("SG", product.sg),
-        createField("ETM", product.etm),
+        createField("Срок годности", product.sg),
+        createField("ЭТМ", product.etm),
         createField("Количество", product.amount)
     );
 
