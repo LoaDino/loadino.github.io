@@ -53,13 +53,20 @@ function createField(label, value) {
 
     const text = document.createElement("span");
 
-    if (label === "Дата" && value) {
+    if (label === "Срок годности" && value) {
         const match = String(value).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
         text.textContent = match
             ? `${match[3]}.${match[2]}.${match[1]}`
-            : value;
+            : String(value);
     } else if (label === "ЭТМ") {
-        text.textContent = String(value) === "1" ? "Да" : "Нет";
+        const etmValue = String(value);
+
+        text.textContent = etmValue === "1"
+            ? "Да"
+            : etmValue === "0"
+                ? "Нет"
+                : (value ?? "");
     } else {
         text.textContent = value ?? "";
     }
