@@ -52,10 +52,19 @@ function createField(label, value) {
     strong.textContent = `${label}: `;
 
     const text = document.createElement("span");
-    text.textContent = value ?? "";
+
+    if (label === "Дата" && value) {
+        const match = String(value).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+        text.textContent = match
+            ? `${match[3]}.${match[2]}.${match[1]}`
+            : value;
+    } else if (label === "ЭТМ") {
+        text.textContent = String(value) === "1" ? "Да" : "Нет";
+    } else {
+        text.textContent = value ?? "";
+    }
 
     field.append(strong, text);
-
     return field;
 }
 
