@@ -217,9 +217,25 @@ h1 {
     background: var(--tg-theme-secondary-bg-color, #f5f5f5);
 }
 
-.product-info,
-.product-info .field,
-.product-info .field strong,
-.product-info .field span {
+.product,
+.product .product-info,
+.product .product-info *,
+.product .product-status,
+.product .days-left {
     color: #222 !important;
+}
+
+.product.status-expired .product-status,
+.product.status-expired .days-left {
+    color: #b71c1c !important;
+}
+
+.product.status-discount .product-status,
+.product.status-discount .days-left {
+    color: #8a4b00 !important;
+}
+
+.product.status-normal .product-status,
+.product.status-normal .days-left {
+    color: #1b6e35 !important;
 }
