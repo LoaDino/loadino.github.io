@@ -76,3 +76,143 @@ h1 {
     padding: 24px 12px;
     text-align: center;
 }
+
+.updated-at {
+    color: #d32f2f;
+    font-weight: 700;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    background: #ffebee;
+    border-radius: 8px;
+}
+
+
+/* Фильтр товаров */
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 12px 0 16px;
+}
+
+.filters label {
+    font-weight: 600;
+}
+
+.filters select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--tg-theme-hint-color, #aaa);
+    border-radius: 10px;
+    background: var(--tg-theme-secondary-bg-color, #f5f5f5);
+    color: var(--tg-theme-text-color, #222);
+    font: inherit;
+}
+
+/* Общая карточка товара */
+.product {
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid var(--tg-theme-hint-color, #ccc);
+    border-left: 6px solid #999;
+    border-radius: 12px;
+    background: var(--tg-theme-secondary-bg-color, #fff);
+    color: var(--tg-theme-text-color, #222);
+}
+
+/* Просроченные */
+.product.status-expired {
+    border-left-color: #d32f2f;
+    background: #fff0f0;
+}
+
+/* Требуют уценки */
+.product.status-discount {
+    border-left-color: #ed8b00;
+    background: #fff5e5;
+}
+
+/* Уценка не требуется */
+.product.status-normal {
+    border-left-color: #2e9d50;
+    background: #edfaef;
+}
+
+/* Не удалось определить статус */
+.product.status-unknown {
+    border-left-color: #777;
+}
+
+.product-status {
+    display: inline-block;
+    padding: 5px 9px;
+    margin: 6px 0;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.status-expired .product-status {
+    color: #b71c1c;
+    background: #ffcdd2;
+}
+
+.status-discount .product-status {
+    color: #8a4b00;
+    background: #ffe0b2;
+}
+
+.status-normal .product-status {
+    color: #1b6e35;
+    background: #c8e6c9;
+}
+
+.status-unknown .product-status {
+    color: #444;
+    background: #e0e0e0;
+}
+
+.days-left {
+    margin: 4px 0 10px;
+    font-weight: 600;
+}
+
+.status-expired .days-left {
+    color: #c62828;
+}
+
+.status-discount .days-left {
+    color: #a45a00;
+}
+
+.status-normal .days-left {
+    color: #23783b;
+}
+
+/* Красная плашка актуальности */
+.updated-at {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background: #ffebee;
+    color: #c62828;
+    font-weight: 700;
+}
+
+/* Подписи и поля карточки */
+.field {
+    margin-top: 5px;
+}
+
+.product-id {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.empty,
+.error {
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 8px;
+    background: var(--tg-theme-secondary-bg-color, #f5f5f5);
+}
