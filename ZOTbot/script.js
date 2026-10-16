@@ -90,6 +90,7 @@ function formatDate(value) {
         : String(value ?? "");
 }
 
+
 function getProductStatus(product) {
     const daysLeft = getDaysLeft(product.sg);
 
@@ -97,40 +98,59 @@ function getProductStatus(product) {
         return {
             type: "unknown",
             label: "Неизвестный срок годности",
-            daysLeft: null
+            daysLeft: null,
+            discountPercent: null
         };
     }
 
-    // Просроченные товары имеют отдельный статус
     if (daysLeft <= 0) {
         return {
             type: "expired",
             label: daysLeft === 0
                 ? "Срок истёк сегодня"
                 : `Просрочен на ${Math.abs(daysLeft)} дн.`,
-            daysLeft
+            daysLeft,
+            discountPercent: null
         };
     }
 
     const isEtm = String(product.etm) === "1";
 
-    // Порог уценки соответствует логике планировщика бота
-    const discountThreshold = isEtm ? 180 : 96;
+    if (isEtm) {
+        return {
+            type: daysLeft <= 180 ? "discount" : "normal",
+            label: daysLeft <= 180 ? "Уценённый" : "Не уценённый",
+            daysLeft,
+            discountPercent: null
+        };
+    }
 
-    if (daysLeft <= discountThreshold) {
+    if (daysLeft <= 30) {
         return {
             type: "discount",
             label: "Уценённый",
-            daysLeft
+            daysLeft,
+            discountPercent: 50
+        };
+    }
+
+    if (daysLeft <= 96) {
+        return {
+            type: "discount",
+            label: "Уценённый",
+            daysLeft,
+            discountPercent: 40
         };
     }
 
     return {
         type: "normal",
         label: "Не уценённый",
-        daysLeft
+        daysLeft,
+        discountPercent: null
     };
 }
+
 
 async function getPhotoUrl(fileId) {
     if (photoCache.has(fileId)) {
@@ -204,6 +224,10 @@ function createProduct(product) {
     const status = document.createElement("div");
     status.className = "product-status";
     status.textContent = product.status.label;
+
+    if (product.status.discountPercent !== null) {
+        status.textContent += ` · Скидка ${product.status.discountPercent}%`;
+    }
 
     const days = document.createElement("div");
     days.className = "days-left";
