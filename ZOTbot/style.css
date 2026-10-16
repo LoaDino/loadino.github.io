@@ -216,3 +216,10 @@ h1 {
     border-radius: 8px;
     background: var(--tg-theme-secondary-bg-color, #f5f5f5);
 }
+
+.product-info,
+.product-info .field,
+.product-info .field strong,
+.product-info .field span {
+    color: #222 !important;
+}
